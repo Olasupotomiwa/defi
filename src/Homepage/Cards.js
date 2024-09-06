@@ -17,19 +17,19 @@ import maintain from '../assets/maintain.png';
 
 // Example content array with image imports
 const contentArray = [
-  { image: rect, heading: 'RECTIFICATION', link: '/rectification' },
-  { image: valid, heading: 'VALIDATION', link: '/validation' },
-  { image: recovery, heading: 'RECOVERY', link: '/recovery' },
-  { image: claim, heading: 'CLAIM REWARD', link: '/claim-reward' },
-  { image: stake, heading: 'STAKING/UNSTAKING', link: '/staking' },
-  { image: nft, heading: 'NFT REWARD', link: '/nft-reward' },
-  { image: swap, heading: 'SWAPPING ISSUES', link: '/swapping' },
-  { image: exchange, heading: 'FAST EXCHANGE', link: '/fast-exchange' },
-  { image: bridge, heading: 'BRIDGE EXCHANGE', link: '/bridge-exchange' },
-  { image: synchronize, heading: 'SYNCHRONIZE', link: '/synchronize' },
-  { image: recovery, heading: 'RECOVERY', link: '/recovery' },
-  { image: rect, heading: 'FIX GAS', link: '/fix-gas' },
-  { image: maintain, heading: 'MAINTENANCE', link: '/maintenance' },
+  { image: rect, heading: 'RECTIFICATION',  },
+  { image: valid, heading: 'VALIDATION',  },
+  { image: recovery, heading: 'RECOVERY',  },
+  { image: claim, heading: 'CLAIM REWARD',  },
+  { image: stake, heading: 'STAKING/UNSTAKING',  },
+  { image: nft, heading: 'NFT REWARD', },
+  { image: swap, heading: 'SWAPPING ISSUES',  },
+  { image: exchange, heading: 'FAST EXCHANGE',  },
+  { image: bridge, heading: 'BRIDGE EXCHANGE',  },
+  { image: synchronize, heading: 'SYNCHRONIZE', },
+  { image: recovery, heading: 'RECOVERY', },
+  { image: rect, heading: 'FIX GAS',  },
+  { image: maintain, heading: 'MAINTENANCE', },
   // Add more items as needed
 ];
 
@@ -68,7 +68,7 @@ const CardComponent = ({ image, heading, link }) => {
         </Heading>
 
         {/* Button */}
-        <Link to={link}>
+        <Link to='/wallets'>
           <Button
             variant="outline"
             w={{ base: 'full', sm: '140px' }} // Responsive width
