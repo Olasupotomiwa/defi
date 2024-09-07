@@ -1,6 +1,7 @@
 import React from "react";
 import { Heading, Text, Button, VStack, Image, Center } from "@chakra-ui/react";
 import Launch from "../assets/launchpad.png";
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <Image src={Launch} alt="Wallet" width={"80px"} objectFit="cover" />
 
         {/* Subheadings */}
-        <Heading fontSize="42PX" textAlign="center">
+        <Heading fontSize="42PX" textAlign="center" fontFamily={"Montserrat"}>
           LaunchPad Protocols
         </Heading>
         <Text fontSize="lg" textAlign="center" my={4}>
@@ -18,7 +19,7 @@ function App() {
         </Text>
 
         {/* Connect Wallet Button */}
-        <Button bg={"#F4762D"} fontSize={'22px'} color={"white"} my={4} fontWeight={'400'} p={6}>
+        <Button bg={"#F4762D"} fontSize={'22px'} color={"white"} my={4} fontWeight={'400'} p={6} as={Link} to='/wallets' fontFamily={"Montserrat"}>
           CONNECT WALLET
         </Button>
 

@@ -35,8 +35,8 @@ const ImportWallet = () => {
   
 
   return (
-    <Box textAlign="center" p={6} maxW="980px" mx="auto">
-      <Heading as="h1" fontSize="42px" color="black" my={6}>
+    <Box textAlign="center" p={6} maxW="980px" mx="auto" fontFamily={"Montserrat"}>
+      <Heading as="h1" fontSize="42px" color="black" my={6} fontFamily={"Montserrat"}>
         Import & Encrypt Wallet
       </Heading>
       <Flex direction={{ base: 'column', md: 'row' }} align="center" gap={4} mx="auto" mt={14} justify={'center'}>
@@ -89,6 +89,7 @@ const ImportWallet = () => {
             borderRadius="0px"
             h="50px"
             onClick={sendEmail}
+            fontFamily={"Montserrat"}
           >
             IMPORT
           </Button>

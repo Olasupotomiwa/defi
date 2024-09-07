@@ -38,8 +38,8 @@ const CardComponent = ({ image, heading, link }) => {
     <Box
       borderWidth="1px"
       overflow="hidden"
-      w={{ base: '100%', sm: '310px' }} 
-      h={{ base: 'auto', sm: '280px' }} 
+      w={{ base: '80%', md: '310px' }} 
+      h={{ base: '240px', md: '260px' }} 
       maxW="sm"
       bg={'#001e36'}
       textAlign="center"
@@ -48,6 +48,7 @@ const CardComponent = ({ image, heading, link }) => {
       flexDirection="column"
       justifyContent="space-between"
       mx="auto"
+      fontFamily={"Montserrat"}
     >
       {/* Image */}
       <Image
@@ -63,7 +64,7 @@ const CardComponent = ({ image, heading, link }) => {
       {/* VStack for Heading and Button */}
       <VStack spacing={4} mt={{ base: 2, sm: 0 }}>
         {/* Heading */}
-        <Heading fontSize={{ base: 'lg', sm: '18px' }} color={"white"}>
+        <Heading fontSize={{ base: 'lg', sm: '18px' }} color={"white"} fontFamily={"Montserrat"}>
           {heading}
         </Heading>
 
@@ -79,6 +80,7 @@ const CardComponent = ({ image, heading, link }) => {
             color="#F4762D"
             fontWeight={"700"}
             _hover={{  borderStyle: 'dashed' }} 
+            fontFamily={"Montserrat"}
           >
             CHOOSE
           </Button>

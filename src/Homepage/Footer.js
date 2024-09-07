@@ -4,6 +4,7 @@ import footerImage from "../assets/footer.png"; // Replace with your image path
 
 const Footer = () => {
   return (
+    <Box>
     <Box
       bg={"#001e36"} // Background color similar to the defined Box
       p={14}
@@ -38,6 +39,10 @@ const Footer = () => {
           </Text>
         </Box>
       </Flex>
+    </Box>
+    <Box bg={"#e9d16f"} w={'full'} p={4} mb={4}>
+    <Text textAlign={'center'}>Defi-Webpage</Text>
+    </Box>
     </Box>
   );
 };

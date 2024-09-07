@@ -6,7 +6,7 @@ import Walletlogo from "./walletlogo";
 const Wallets = () => {
   return (
     <Box>
-      <Box maxW={"980px"} mx={"auto"}>
+      <Box maxW={"980px"} mx={"auto"} fontFamily={"Montserrat"}>
         <Header />
         <Walletlogo/>
       </Box>

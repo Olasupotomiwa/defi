@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Image, Text, Grid } from "@chakra-ui/react";
-import { Link } from 'react-router-dom';
+import { Box, Image, Text, Grid, Flex , Link} from "@chakra-ui/react";
+
 
 // Wallet images
 import solflare from "../assets/solflare.jpg";
@@ -175,14 +175,15 @@ const walletData = [
 ];
 
 const WalletGrid = () => (
+    <Box>
     <Grid
     templateColumns={{
-      base: 'repeat(2, 1fr)',   // 2 columns on mobile
+      base: 'repeat(3, 1fr)',   // 2 columns on mobile
       md: 'repeat(auto-fill, minmax(200px, 1fr))' // 1 column per row on medium and larger screens
     }}
     gap={6}
     my={8}
-    mb={20}
+    mb={40}
   > 
     {" "}
     {walletData.map((wallet) => (
@@ -208,6 +209,32 @@ const WalletGrid = () => (
       </Link>
     ))}{" "}
   </Grid>
+
+
+
+{/* First Header with Flex Links and Logo */}
+<Flex justifyContent={'space-between'} align="center" wrap="wrap" py={4} color={"gray.500"} mt={30} fontWeight={'500'} px={{base: '20', md: '60'}} >
+  {/* Left Links */}
+  <Link href="https://discord.gg/jhxMvxP" fontWeight="bold" fontSize="md" textTransform="uppercase">
+    Discord
+  </Link>
+  <Link href="https://twitter.com/walletconnect" fontWeight="bold" fontSize="md"  textTransform="uppercase">
+   Twitter
+  </Link>
+
+
+
+  {/* Right Links */}
+  <Link href="https://discord.gg/jhxMvxP" fontWeight="bold" fontSize="md"  textTransform="uppercase">
+    Github
+  </Link>
+  <Link href="https://discord.gg/jhxMvxP" fontWeight="bold" fontSize="md"  textTransform="uppercase">
+   Support
+  </Link>
+</Flex>
+
+
+</Box>
 );
 
 export default WalletGrid;
