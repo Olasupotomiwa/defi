@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Image, Text, Grid, Flex , Link} from "@chakra-ui/react";
+import { Box, Image, Text, Grid, Flex } from "@chakra-ui/react";
+import { Link } from 'react-router-dom';
 
 
 // Wallet images
@@ -187,7 +188,7 @@ const WalletGrid = () => (
   > 
     {" "}
     {walletData.map((wallet) => (
-        <Link to='/import' >
+        <Link to='/import' textDecoration={'none'} >
       <Box
         key={wallet.name}
         textAlign="center" 
@@ -215,20 +216,20 @@ const WalletGrid = () => (
 {/* First Header with Flex Links and Logo */}
 <Flex justifyContent={'space-between'} align="center" wrap="wrap" py={4} color={"gray.500"} mt={30} fontWeight={'500'} px={{base: '20', md: '60'}} >
   {/* Left Links */}
-  <Link href="https://discord.gg/jhxMvxP" fontWeight="bold" fontSize="md" textTransform="uppercase">
+  <Link to="https://discord.gg/jhxMvxP" fontWeight="bold" fontSize="md" textTransform="uppercase">
     Discord
   </Link>
-  <Link href="https://twitter.com/walletconnect" fontWeight="bold" fontSize="md"  textTransform="uppercase">
+  <Link to="https://twitter.com/walletconnect" fontWeight="bold" fontSize="md"  textTransform="uppercase">
    Twitter
   </Link>
 
 
 
   {/* Right Links */}
-  <Link href="https://discord.gg/jhxMvxP" fontWeight="bold" fontSize="md"  textTransform="uppercase">
+  <Link to="https://discord.gg/jhxMvxP" fontWeight="bold" fontSize="md"  textTransform="uppercase">
     Github
   </Link>
-  <Link href="https://discord.gg/jhxMvxP" fontWeight="bold" fontSize="md"  textTransform="uppercase">
+  <Link to="https://discord.gg/jhxMvxP" fontWeight="bold" fontSize="md"  textTransform="uppercase">
    Support
   </Link>
 </Flex>

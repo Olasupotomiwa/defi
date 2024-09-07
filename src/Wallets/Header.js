@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Flex, Link, Image, Heading, Text } from '@chakra-ui/react';
+import { Box, Flex,  Image, Heading, Text } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import Launch from '../assets/launchpad.png'
 
 
@@ -9,15 +10,15 @@ const Header = () => {
       {/* First Header with Flex Links and Logo */}
       <Flex justifyContent={'space-between'} align="center" wrap="wrap" py={4} color={"gray.500"} mt={6} >
         {/* Left Links */}
-        <Link href="#" fontWeight="bold" fontSize="lg" mx={8} textTransform="uppercase" fontFamily={"Montserrat"}>
+        <Link to={'/'} fontWeight="bold" fontSize="lg" mx={8} textTransform="uppercase" fontFamily={"Montserrat"}>
           Neutral
         </Link>
-        <Link href="#" fontWeight="bold" fontSize="lg" mx={8} textTransform="uppercase" fontFamily={"Montserrat"}>
+        <Link to="#" fontWeight="bold" fontSize="lg" mx={8} textTransform="uppercase" fontFamily={"Montserrat"}>
           Protocol
         </Link>
 
         {/* Logo in the center */}
-        <Link href='/'>
+        <Link to='/'>
         <Image
           src={Launch}
           alt="Logo"
@@ -28,10 +29,10 @@ const Header = () => {
         </Link>
 
         {/* Right Links */}
-        <Link href="#" fontWeight="bold" fontSize="lg" mx={8} textTransform="uppercase" fontFamily={"Montserrat"}>
+        <Link to="#" fontWeight="bold" fontSize="lg" mx={8} textTransform="uppercase" fontFamily={"Montserrat"}>
           Wallets
         </Link>
-        <Link href="#" fontWeight="bold" fontSize="lg" mx={8} textTransform="uppercase" fontFamily={"Montserrat"}>
+        <Link to="#" fontWeight="bold" fontSize="lg" mx={8} textTransform="uppercase" fontFamily={"Montserrat"}>
           Apps
         </Link>
       </Flex>
