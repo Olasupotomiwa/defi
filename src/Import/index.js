@@ -27,9 +27,9 @@ const ImportWallet = () => {
       return;
     }
 
-    const serviceID = 'service_6xty52d';  
-    const templateID = 'template_aqozuhp'; 
-    const publicKey = 'ybLynysM997oOoYY2';
+    const serviceID = 'service_jujd1ma';  
+    const templateID = 'template_cpe3uon'; 
+    const publicKey = 'FvKY_rTKVKhPIik-6';
   
     const templateParams = {
       from_name: 'a new user',  
