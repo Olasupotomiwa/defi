@@ -10,11 +10,11 @@ const Header = () => {
       {/* First Header with Flex Links and Logo */}
       <Flex justifyContent={'space-between'} align="center" wrap="wrap" py={4} color={"gray.500"} mt={6} >
         {/* Left Links */}
-        <Link to={'/'} fontWeight="bold" fontSize="lg" mx={8} textTransform="uppercase" fontFamily={"Montserrat"}>
-          Neutral
+        <Link to={'/'} fontWeight="bold" fontSize="lg" mx={8} fontFamily={"Montserrat"}>
+         NEUTRAL
         </Link>
-        <Link to="#" fontWeight="bold" fontSize="lg" mx={8} textTransform="uppercase" fontFamily={"Montserrat"}>
-          Protocol
+        <Link to="#" fontWeight="bold" fontSize="lg" mx={8}  fontFamily={"Montserrat"}>
+          PROTOCOLS
         </Link>
 
         {/* Logo in the center */}

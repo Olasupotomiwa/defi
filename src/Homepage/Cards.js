@@ -38,7 +38,7 @@ const CardComponent = ({ image, heading, link }) => {
     <Box
       borderWidth="1px"
       overflow="hidden"
-      w={{ base: '80%', md: '310px' }} 
+      w={{ base: '90%', md: '310px' }} 
       h={{ base: '240px', md: '260px' }} 
       maxW="sm"
       bg={'#001e36'}
@@ -53,11 +53,11 @@ const CardComponent = ({ image, heading, link }) => {
       {/* Image */}
       <Image
         src={image}
-        w={{ base: '48px', sm: '64px' }} 
-        h={{ base: '48px', sm: '64px' }} 
+        w={{ base: '64px', md: '64px' }} 
+        h={{ base: '64px', md: '64px' }} 
         alt="Card Image"
         borderRadius="full"
-        mt={{ base: 2, sm: 6 }} // Responsive margin top
+        mt='6'
         mx="auto"
       />
 

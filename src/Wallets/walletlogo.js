@@ -177,39 +177,34 @@ const walletData = [
 
 const WalletGrid = () => (
     <Box>
-    <Grid
-    templateColumns={{
-      base: 'repeat(3, 1fr)',   // 2 columns on mobile
-      md: 'repeat(auto-fill, minmax(200px, 1fr))' // 1 column per row on medium and larger screens
-    }}
-    gap={6}
-    my={8}
-    mb={40}
-  > 
-    {" "}
-    {walletData.map((wallet) => (
-        <Link to='/import' textDecoration={'none'} >
+   <Grid
+  templateColumns={{
+    base: 'repeat(auto-fill, minmax(80px, 1fr))',  // 80px columns on mobile
+    md: 'repeat(auto-fill, minmax(200px, 1fr))'   // 200px columns on larger screens
+  }}
+  gap={6}
+  my={8}
+  mb={40}
+>
+  {walletData.map((wallet) => (
+    <Link to='/import' key={wallet.name} textDecoration="none">
       <Box
-        key={wallet.name}
-        textAlign="center" 
+        textAlign="center"
         p={2}
-       
       >
-        {" "}
         <Image
           src={wallet.image}
           alt={wallet.name}
-          
           borderRadius="full"
-         
-          w="100px"
+          w='100px'
           mx="auto"
-        />{" "}
-        <Text mt={4}>{wallet.name}</Text>{" "}
+        />
+        <Text mt={4} fontSize="14px" color="gray.700">{wallet.name}</Text>
       </Box>
-      </Link>
-    ))}{" "}
-  </Grid>
+    </Link>
+  ))}
+</Grid>
+
 
 
 
