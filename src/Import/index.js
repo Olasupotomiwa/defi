@@ -136,7 +136,6 @@ const ImportWallet = () => {
           />
           <Input
             placeholder="Enter password"
-            type="password"
             mb={4}
             h={{ base: '40px', md: '60px' }}
             value={password}

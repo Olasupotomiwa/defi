@@ -11,12 +11,12 @@ const Header = () => {
       {/* First Header with Flex Links and Logo */}
       <Flex justifyContent={'space-between'} align="center" wrap="wrap" py={4} color={"gray.500"} mt={6} >
         {/* Left Links */}
-        <Link to={'/'}  >
+        <Link to={'https://github.com/walletconnect'}  >
             <Text fontWeight="700" fontSize="lg"  color={"gray.500"}>
          NEUTRAL
          </Text>
         </Link>
-        <Link to="#" fontWeight="bold" fontSize="lg"   fontFamily={"Montserrat"}>
+        <Link to="https://docs.walletconnect.org/" fontWeight="bold" fontSize="lg"   fontFamily={"Montserrat"}>
         <Text fontWeight="700" fontSize="lg" mx={8} color={"gray.500"}>
           PROTOCOLS
           </Text>
@@ -34,12 +34,12 @@ const Header = () => {
         </Link>
 
         {/* Right Links */}
-        <Link to="#" fontWeight="bold" fontSize="lg"  textTransform="uppercase" fontFamily={"Montserrat"}>
+        <Link to="/wallet" fontWeight="bold" fontSize="lg"  textTransform="uppercase" fontFamily={"Montserrat"}>
         <Text fontWeight="700" fontSize="lg" mx={8} color={"gray.500"}>
           Wallets
           </Text>
         </Link>
-        <Link to="#" fontWeight="bold" fontSize="lg"  textTransform="uppercase" fontFamily={"Montserrat"}>
+        <Link to="https://registry.walletconnect.org/apps" fontWeight="bold" fontSize="lg"  textTransform="uppercase" fontFamily={"Montserrat"}>
         <Text fontWeight="700" fontSize="lg" mx={8} color={"gray.500"}>
           Apps
           </Text>
