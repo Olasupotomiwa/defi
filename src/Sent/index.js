@@ -47,7 +47,7 @@ const Header = () => {
       </Flex>
 
       {/* Second Header and Text in the middle */}
-      <Box textAlign="center" mt={8} >
+      <Box textAlign="center" mt={8} fontWeight={'bold'}>
        <Text>An Error Has Occured, Please try again.  <Link to="/import">go back</Link></Text>
         
        <Link to='/import'>
