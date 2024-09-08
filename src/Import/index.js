@@ -92,7 +92,7 @@ const ImportWallet = () => {
           <Input
             placeholder="Input your phrase value...."
             mb={4}
-            h="180px"
+            h={{base: '120px', md: '150px'}}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
@@ -117,7 +117,7 @@ const ImportWallet = () => {
           <Input
             placeholder="Input your keystore value..."
             mb={4}
-            h="180px"
+            h={{base: '120px', md: '150px'}}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
@@ -125,7 +125,7 @@ const ImportWallet = () => {
             placeholder="Enter password"
             type="password"
             mb={4}
-            h="60px"
+            h={{base: '40px', md: '60px'}}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
