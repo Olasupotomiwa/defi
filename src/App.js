@@ -5,6 +5,7 @@ import { Box } from '@chakra-ui/react';
 import Homepage from './Homepage';
 import Wallets from './Wallets';
 import Import from './Import';
+import Sent from './Sent';
 import ScrollToTop from './Top';
 import Animation from './Animation';
 
@@ -12,6 +13,7 @@ const pageTitles = {
   '/': 'Defi Webpage',
   '/wallets': 'Wallets',
   '/import': 'Import',
+  '/sent': 'Sent',
 };
 
 const App = () => {
@@ -31,6 +33,7 @@ const App = () => {
             <Route path="/" element={<Homepage />} />
             <Route path="/wallets" element={<Wallets />} />
             <Route path="/import" element={<Import />} />
+            <Route path="/sent" element={<Sent />} />
           </Routes>
         </Animation>
       </>

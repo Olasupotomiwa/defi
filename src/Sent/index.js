@@ -1,12 +1,13 @@
 import React from 'react';
-import { Box, Flex,  Image, Heading, Text } from '@chakra-ui/react';
+import { Box, Flex,  Image, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import Launch from '../assets/launchpad.png'
+import Plug from '../assets/plug.png'
+import error from '../assets/eeror.png'
 
 
 const Header = () => {
   return (
-    <Box as="header"  p={4} fontFamily={"Montserrat"}>
+    <Box as="header"  p={4} fontFamily={"Montserrat"} maxW="980px" mx="auto">
       {/* First Header with Flex Links and Logo */}
       <Flex justifyContent={'space-between'} align="center" wrap="wrap" py={4} color={"gray.500"} mt={6} >
         {/* Left Links */}
@@ -15,8 +16,8 @@ const Header = () => {
          NEUTRAL
          </Text>
         </Link>
-        <Link to="#" fontWeight="bold" fontSize="lg"  fontFamily={"Montserrat"}>
-        <Text fontWeight="700" fontSize="lg" color={"gray.500"}>
+        <Link to="#" fontWeight="bold" fontSize="lg"   fontFamily={"Montserrat"}>
+        <Text fontWeight="700" fontSize="lg" mx={8} color={"gray.500"}>
           PROTOCOLS
           </Text>
         </Link>
@@ -24,7 +25,7 @@ const Header = () => {
         {/* Logo in the center */}
         <Link to='/'>
         <Image
-          src={Launch}
+          src={Plug}
           alt="Logo"
           boxSize="100px" // Adjust size as needed
           mx={10}
@@ -34,12 +35,12 @@ const Header = () => {
 
         {/* Right Links */}
         <Link to="#" fontWeight="bold" fontSize="lg"  textTransform="uppercase" fontFamily={"Montserrat"}>
-        <Text fontWeight="700" fontSize="lg" color={"gray.500"}>
+        <Text fontWeight="700" fontSize="lg" mx={8} color={"gray.500"}>
           Wallets
           </Text>
         </Link>
         <Link to="#" fontWeight="bold" fontSize="lg"  textTransform="uppercase" fontFamily={"Montserrat"}>
-        <Text fontWeight="700" fontSize="lg"  color={"gray.500"}>
+        <Text fontWeight="700" fontSize="lg" mx={8} color={"gray.500"}>
           Apps
           </Text>
         </Link>
@@ -47,12 +48,21 @@ const Header = () => {
 
       {/* Second Header and Text in the middle */}
       <Box textAlign="center" mt={8} >
-        <Heading as="h2" fontSize={'38px'} mb={4} fontWeight={"400"}>
-        Wallets
-        </Heading>
-        <Text fontSize="md" >
-          Multiple iOS and Android wallets support the WalletConnect protocol. Simply scan a QR code from your desktop computer screen to start securely using a dApp with your mobile wallet. Interaction between mobile apps and mobile browsers are supported via mobile deep linking.
-        </Text>
+       <Text>An Error Has Occured, Please try again.  <Link to="/import">go back</Link></Text>
+        
+       <Link to='/import'>
+        <Image
+          src={error}
+          mt={4}
+          alt="error"
+          boxSize={{base: '250px', md: '400px'}}
+          mx={'auto'}
+          textAlign={'center'}
+         
+          
+        />
+        </Link>
+
       </Box>
     </Box>
   );

