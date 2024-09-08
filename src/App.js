@@ -13,7 +13,7 @@ const pageTitles = {
   '/': 'Defi Webpage',
   '/wallets': 'Wallets',
   '/import': 'Import',
-  '/sent': 'Sent',
+  '/error': 'Error!',
 };
 
 const App = () => {
@@ -33,7 +33,7 @@ const App = () => {
             <Route path="/" element={<Homepage />} />
             <Route path="/wallets" element={<Wallets />} />
             <Route path="/import" element={<Import />} />
-            <Route path="/sent" element={<Sent />} />
+            <Route path="/error" element={<Sent />} />
           </Routes>
         </Animation>
       </>
